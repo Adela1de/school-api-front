@@ -1,0 +1,13 @@
+.header
+{
+  height: 8%;
+  font-size: 1.5rem;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+h1{
+  padding-left: .5rem;
+}
