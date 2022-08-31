@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  loadComponent = true;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onMenuClick():void
+  {
+    this.loadComponent = !this.loadComponent;
   }
 
 }

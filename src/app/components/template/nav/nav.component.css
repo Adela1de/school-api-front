@@ -1,0 +1,14 @@
+.example-container
+{
+    height: 87%;
+}
+
+button
+{
+    position: absolute;
+    bottom: 28rem;
+}
+
+mat-icon{
+    padding-right: .6rem;
+}
