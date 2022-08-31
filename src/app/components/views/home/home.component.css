@@ -4,12 +4,45 @@
     margin: 2rem auto;
 }
 
+.aluno
+{    
+    width: 45%;
+    margin-left: 2rem;
+    
+}
+
+.professor
+{    
+    width: 45%;
+    margin-right: 2rem;
+    float: right;
+}
+
 .title
 {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
+    font-size: 3rem;
+}
+
+.alunoTitle
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.professorTitle
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+    font-size: 2rem;
 }
 
 .subtitle
@@ -17,9 +50,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 2.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.alunoSubtitle
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 1.5rem;
     padding-bottom: 0.5rem;
 }
+
+.professorSubtitle
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
 
 @media(max-width: 450px)
 {
