@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,8 @@ import { LoginComponent } from './components/views/user/login/login.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { UserRegisterComponent } from './components/views/user/user-register/user-register.component';
+import {DragDropModule} from '@angular/cdk/drag-drop';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,10 @@ import { UserRegisterComponent } from './components/views/user/user-register/use
     MatListModule,
     MatCardModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    HttpClientModule,
+    DragDropModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
