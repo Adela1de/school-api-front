@@ -14,7 +14,10 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
 import { HomeComponent } from './components/views/home/home.component';
-import { LoginComponent } from './components/views/login/login.component';
+import { LoginComponent } from './components/views/user/login/login.component';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { UserRegisterComponent } from './components/views/user/user-register/user-register.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,8 @@ import { LoginComponent } from './components/views/login/login.component';
     FooterComponent,
     NavComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    UserRegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +38,9 @@ import { LoginComponent } from './components/views/login/login.component';
     MatButtonModule,
     MatSidenavModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatInputModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

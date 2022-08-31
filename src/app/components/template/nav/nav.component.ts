@@ -10,6 +10,7 @@ export class NavComponent implements OnInit {
 
   showFiller = false;
   buttonState = true;
+  show = true;
   buttonIcon = "arrow_forward";
 
   constructor() { }
