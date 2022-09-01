@@ -21,6 +21,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { UserRegisterComponent } from './components/views/user/user-register/user-register.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { FormsModule } from '@angular/forms';
+import { UserLogoffComponent } from './components/views/user/user-logoff/user-logoff.component';
+import { CoursesReadComponent } from './components/views/school/courses-read/courses-read.component';
+import {MatTableModule} from '@angular/material/table';
+import { CoursesWarningComponent } from './components/view/school/courses-warning/courses-warning.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,10 @@ import { FormsModule } from '@angular/forms';
     NavComponent,
     HomeComponent,
     LoginComponent,
-    UserRegisterComponent
+    UserRegisterComponent,
+    UserLogoffComponent,
+    CoursesReadComponent,
+    CoursesWarningComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +53,8 @@ import { FormsModule } from '@angular/forms';
     MatFormFieldModule,
     HttpClientModule,
     DragDropModule,
-    FormsModule
+    FormsModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,19 +1,19 @@
 <mat-drawer-container class="example-container">
     <mat-drawer #drawer class="example-sidenav" mode="side">
       <mat-nav-list>
-        <a *ngIf="show == true" routerLink="" mat-list-item>
+        <a *ngIf="showLoggedContent == true" routerLink="" mat-list-item>
             <mat-icon color="accent">home</mat-icon>Home
         </a>
-        <a *ngIf="show == true" routerLink="/login" mat-list-item>
+        <a *ngIf="showLoggedContent == false" routerLink="/login" mat-list-item>
             <mat-icon color="accent">lock_open</mat-icon>Log in
         </a>
-        <a *ngIf="show == true" routerLink="/register" mat-list-item>
+        <a *ngIf="showLoggedContent == false" routerLink="/register" mat-list-item>
             <mat-icon color="accent">assignment_ind</mat-icon>Register
         </a>
-        <a *ngIf="show == false" mat-list-item>
+        <a *ngIf="showLoggedContent == true" routerLink="/courses" mat-list-item>
             <mat-icon color="accent">book</mat-icon>Courses
         </a>
-        <a *ngIf="show == false" mat-list-item>
+        <a *ngIf="showLoggedContent == true" routerLink="/logoff" mat-list-item>
             <mat-icon color="accent">highlight_off</mat-icon>Log off
         </a>
       </mat-nav-list>

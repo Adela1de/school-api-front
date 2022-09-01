@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { user } from '../../views/user/user.model';
 
 @Component({
   selector: 'app-nav',
@@ -10,13 +11,21 @@ export class NavComponent implements OnInit {
 
   showFiller = false;
   buttonState = true;
-  show = true;
+  showLoggedContent = false;
   buttonIcon = "arrow_forward";
+  user: user = 
+  {
+    id:'',
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: ''
+  }
 
   constructor() { }
 
   ngOnInit(): void {
-
+    if(localStorage.getItem('user') != null) this.showLoggedContent = true;
   }
 
   changeButtonIcon():void
