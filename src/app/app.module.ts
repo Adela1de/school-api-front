@@ -24,7 +24,7 @@ import { FormsModule } from '@angular/forms';
 import { UserLogoffComponent } from './components/views/user/user-logoff/user-logoff.component';
 import { CoursesReadComponent } from './components/views/school/courses-read/courses-read.component';
 import {MatTableModule} from '@angular/material/table';
-import { CoursesWarningComponent } from './components/view/school/courses-warning/courses-warning.component';
+import { CoursesWarningComponent } from './components/views/school/courses-warning/courses-warning.component';
 
 @NgModule({
   declarations: [

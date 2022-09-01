@@ -1,0 +1,13 @@
+<mat-card class="login mat-elevetion-z4" mat-card color="accent">
+    <mat-card-title class="loginTitle">
+        Tem certeza de deseja se matrícular no curso {{ course.title }} ?
+    </mat-card-title>
+</mat-card>
+
+<div class="buttons">
+    <div class="ok">
+        <button mat-raised-button color="accent" (click)="confirmRegistration()">CONFIRM</button>
+    </div>
+    <button mat-raised-button color="accent" (click)="cancelRegistration()">CANCEL</button>
+</div>
+

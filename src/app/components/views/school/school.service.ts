@@ -18,4 +18,10 @@ export class SchoolService {
     const url = `${this.baseUrl}/school/courses`
     return this.http.get<course[]>(url);
   }
+
+  getCourseById(id: String):Observable<course>
+  {
+    const url = `${this.baseUrl}/school/course/${id}`
+    return this.http.get<course>(url);
+  }
 }
