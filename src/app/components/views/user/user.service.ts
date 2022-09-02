@@ -19,4 +19,10 @@ export class UserService {
     return this.http.post<user>(url,{email, password})
   }
 
+  addUser(user: user):Observable<user>
+  {
+    const url = `${this.baseUrl}student/new`
+    return this.http.post<user>(url, user)
+  }
+
 }

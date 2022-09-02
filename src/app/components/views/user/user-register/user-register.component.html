@@ -8,32 +8,34 @@
     <div class="input">
         <mat-form-field class="form">
             <mat-label>First Name</mat-label>
-            <input matInput type="text" name="First Name" placeholder="Ex. Lucas">  
+            <input matInput [(ngModel)]="user.firstName" type="text" name="First Name" placeholder="Ex. Lucas">  
         </mat-form-field>
     </div>
     <div class="input">
         <mat-form-field class="form">
             <mat-label>Last Name</mat-label>
-            <input matInput type="text" name="Last Name" placeholder="Ex. Silva">  
+            <input matInput [(ngModel)]="user.lastName" type="text" name="Last Name" placeholder="Ex. Silva">  
         </mat-form-field>
     </div>
-    <div class="input">
-        <mat-form-field class="form">
-            <mat-label>Password</mat-label>
-            <input matInput type="text" name="Password" placeholder="Ex. 123456789">  
-        </mat-form-field>
-    </div>
+
     <div class="input">
         <mat-form-field class="form">
             <mat-label>E-mail</mat-label>
-            <input matInput type="text" name="E-mail" placeholder="Ex. teste@gmail.com">  
+            <input matInput type="text" [(ngModel)]="user.email" name="E-mail" placeholder="Ex. teste@gmail.com">  
+        </mat-form-field>
+    </div>
+    
+    <div class="input">
+        <mat-form-field class="form">
+            <mat-label>Password</mat-label>
+            <input matInput [(ngModel)]="user.password" type="text" name="Password" placeholder="Ex. 123456789">  
         </mat-form-field>
     </div>
 </mat-card>
 
 <div class="buttons">
     <div class="ok">
-        <button mat-raised-button color="accent">CONFIRM</button>
+        <button (click)="confirmRegistration()" mat-raised-button color="accent">CONFIRM</button>
     </div>
     <button mat-raised-button color="accent">CANCEL</button>
 </div>
