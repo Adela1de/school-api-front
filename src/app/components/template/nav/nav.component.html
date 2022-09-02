@@ -16,8 +16,11 @@
         <a *ngIf="showLoggedContent == true" routerLink="/logoff" mat-list-item>
             <mat-icon color="accent">highlight_off</mat-icon>Log off
         </a>
-        <a *ngIf="isUserRegisteredInACourse == true" routerLink="/myClasses" mat-list-item>
+        <a *ngIf="isUserRegisteredInACourse == true" routerLink="/courseClasses" mat-list-item>
             <mat-icon color="accent">highlight_off</mat-icon>Matérias do curso
+        </a>
+        <a *ngIf="isUserRegisteredInACourse == true" routerLink="/myCourseClasses" mat-list-item>
+            <mat-icon color="accent">highlight_off</mat-icon>Minhas Matérias
         </a>
       </mat-nav-list>
     </mat-drawer>

@@ -1,7 +1,5 @@
-import { JsonPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Observable } from 'rxjs';
 import { user } from '../../user/user.model';
 import { course } from '../course.model';
 import { SchoolService } from '../school.service';

@@ -27,6 +27,7 @@ import {MatTableModule} from '@angular/material/table';
 import { CoursesWarningComponent } from './components/views/school/courses-warning/courses-warning.component';
 import { CourseClassRegistrationComponent } from './components/views/school/courses-course-classes/course-class-registration/course-class-registration.component';
 import { CourseClassReadComponent } from './components/views/school/courses-course-classes/course-class-read/course-class-read.component';
+import { MyCourseClassesComponent } from './components/views/school/courses-course-classes/my-course-classes/my-course-classes.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { CourseClassReadComponent } from './components/views/school/courses-cour
     CoursesReadComponent,
     CoursesWarningComponent,
     CourseClassRegistrationComponent,
-    CourseClassReadComponent
+    CourseClassReadComponent,
+    MyCourseClassesComponent
   ],
   imports: [
     BrowserModule,
