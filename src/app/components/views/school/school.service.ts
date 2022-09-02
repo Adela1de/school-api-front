@@ -16,15 +16,21 @@ export class SchoolService {
 
   constructor(private http: HttpClient) { }
 
+  getUserById(userId: String):Observable<user>
+  {
+    const url = `${this.baseUrl}student/${userId}`
+    return this.http.get<user>(url);
+  }
+
   getAllCourses():Observable<course[]>
   {
     const url = `${this.baseUrl}courses`
     return this.http.get<course[]>(url);
   }
 
-  getCourseById(id: String):Observable<course>
+  getCourseById(courseId: String):Observable<course>
   {
-    const url = `${this.baseUrl}course/${id}`
+    const url = `${this.baseUrl}course/${courseId}`
     return this.http.get<course>(url);
   }
 
