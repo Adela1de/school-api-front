@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { courseClass } from '../../courseClass.model';
+import { SchoolService } from '../../school.service';
 
 @Component({
   selector: 'app-my-course-classes',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyCourseClassesComponent implements OnInit {
 
-  constructor() { }
+  displayedColumns: String[] = ['title', 'credit']
+
+  courseClasses: courseClass[] = []
+
+  constructor(private schoolService: SchoolService) { }
 
   ngOnInit(): void {
+    this.schoolService.getAllCourseClassesOfAStudent().subscribe(answer => {
+      this.courseClasses = answer;
+    })
   }
 
 }
