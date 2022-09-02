@@ -25,6 +25,8 @@ import { UserLogoffComponent } from './components/views/user/user-logoff/user-lo
 import { CoursesReadComponent } from './components/views/school/courses-read/courses-read.component';
 import {MatTableModule} from '@angular/material/table';
 import { CoursesWarningComponent } from './components/views/school/courses-warning/courses-warning.component';
+import { CourseClassRegistrationComponent } from './components/views/school/courses-course-classes/course-class-registration/course-class-registration.component';
+import { CourseClassReadComponent } from './components/views/school/courses-course-classes/course-class-read/course-class-read.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { CoursesWarningComponent } from './components/views/school/courses-warni
     UserRegisterComponent,
     UserLogoffComponent,
     CoursesReadComponent,
-    CoursesWarningComponent
+    CoursesWarningComponent,
+    CourseClassRegistrationComponent,
+    CourseClassReadComponent
   ],
   imports: [
     BrowserModule,

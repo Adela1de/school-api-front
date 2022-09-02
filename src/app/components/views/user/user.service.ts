@@ -15,7 +15,7 @@ export class UserService {
 
   getUser(email: String, password: String):Observable<user>
   {
-    const url = `${this.baseUrl}/school/student/login`
+    const url = `${this.baseUrl}student/login`
     return this.http.post<user>(url,{email, password})
   }
 

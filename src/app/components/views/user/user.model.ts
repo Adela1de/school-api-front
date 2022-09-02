@@ -1,6 +1,6 @@
 export interface user
 {
-    id?: String;
+    studentId?: String;
     firstName?: String;
     lastName?: String;
     email: String;

@@ -1,5 +1,8 @@
+import { JsonPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { user } from '../../user/user.model';
 import { course } from '../course.model';
 import { SchoolService } from '../school.service';
 
@@ -8,6 +11,7 @@ import { SchoolService } from '../school.service';
   templateUrl: './courses-warning.component.html',
   styleUrls: ['./courses-warning.component.css']
 })
+
 export class CoursesWarningComponent implements OnInit {
 
   course: course =
@@ -15,6 +19,13 @@ export class CoursesWarningComponent implements OnInit {
     id: '',
     title:'',
     teacherName: ''
+  }
+
+  user: user =
+  {
+    studentId: '',
+    email: '',
+    password: ''
   }
 
   constructor(private router: Router, private schoolService: SchoolService, private route: ActivatedRoute) { }
@@ -34,7 +45,9 @@ export class CoursesWarningComponent implements OnInit {
 
   confirmRegistration():void
   {
-
+    this.schoolService.setCourseToStudent(this.route.snapshot.paramMap.get('id')!).subscribe(answer => {
+      console.log(answer)
+    });
   }
 
 }

@@ -15,7 +15,7 @@ export class NavComponent implements OnInit {
   buttonIcon = "arrow_forward";
   user: user = 
   {
-    id:'',
+    studentId:'',
     firstName: '',
     lastName: '',
     email: '',

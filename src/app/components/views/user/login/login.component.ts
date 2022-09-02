@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
 
   user: user = 
   {
-    id:'',
+    studentId:'',
     firstName: '',
     lastName: '',
     email: '',
@@ -33,15 +33,10 @@ export class LoginComponent implements OnInit {
   {
     this.userService.getUser(this.user.email, this.user.password).subscribe(
       answer => {
-        this.user.id = JSON.stringify(answer.id);
-        this.user.firstName = answer.firstName;
-        this.user.lastName = answer.lastName;
-        this.user.email = answer.email;
-        localStorage.setItem('user', JSON.stringify(answer));
+        localStorage.setItem('user', JSON.stringify(answer.studentId));
       }
     )
-    window.location.reload();
-    this.router.navigate(['']);
+
   }
 
 }
