@@ -48,6 +48,9 @@ export class CoursesWarningComponent implements OnInit {
     this.schoolService.setCourseToStudent(this.route.snapshot.paramMap.get('id')!).subscribe(answer => {
       console.log(answer)
     });
+
+    window.location.reload();
+    this.router.navigate(['']);
   }
 
 }

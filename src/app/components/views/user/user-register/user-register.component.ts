@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { user } from '../user.model';
 import { UserService } from '../user.service';
 
@@ -17,7 +18,7 @@ export class UserRegisterComponent implements OnInit {
     password: ''
   }
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -29,6 +30,8 @@ export class UserRegisterComponent implements OnInit {
       localStorage.clear();
       localStorage.setItem('user', JSON.stringify(answer.studentId))
     })
+    window.location.reload();
+    this.router.navigate(['']);
   }
 
 }

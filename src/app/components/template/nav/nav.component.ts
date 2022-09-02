@@ -22,7 +22,7 @@ export class NavComponent implements OnInit {
     lastName: '',
     email: '',
     password: '',
-    course: ''
+    courseTitle: ''
   }
 
   constructor(private schoolService: SchoolService) { }
@@ -34,7 +34,8 @@ export class NavComponent implements OnInit {
       this.schoolService.getUserById(localStorage.getItem('user')!).subscribe(
         answer => {
           this.user = answer;
-          if(this.user.course != null) this.isUserRegisteredInACourse = true;
+          if(this.user.courseTitle != null) this.isUserRegisteredInACourse = true;
+          console.log(this.user)
       })
     }
   }

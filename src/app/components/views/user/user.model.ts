@@ -6,7 +6,7 @@ export interface user
     email: String;
     password: String;
     guardian?: any[];
-    course?: any;
+    courseTitle?: String;
     classes?: any[];
     grades?: any[];
 }

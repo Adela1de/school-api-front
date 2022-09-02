@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { user } from '../../../user/user.model';
+import { SchoolService } from '../../school.service';
 
 @Component({
   selector: 'app-course-class-read',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseClassReadComponent implements OnInit {
 
-  constructor() { }
+  user: user=
+  {
+    password: '',
+    email: '',
+    courseTitle: ''
+  }
+
+  constructor(private schoolService: SchoolService) { }
 
   ngOnInit(): void {
+
   }
 
 }
