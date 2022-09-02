@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { courseClass } from '../../courseClass.model';
 import { user } from '../../../user/user.model';
 import { SchoolService } from '../../school.service';
 
@@ -9,6 +11,9 @@ import { SchoolService } from '../../school.service';
 })
 export class CourseClassReadComponent implements OnInit {
 
+  displayedColumns: String[] = ['title','credit', 'actions']
+
+  courseClass: courseClass[] = []
   user: user=
   {
     password: '',
@@ -16,10 +21,21 @@ export class CourseClassReadComponent implements OnInit {
     courseTitle: ''
   }
 
-  constructor(private schoolService: SchoolService) { }
+  constructor(private schoolService: SchoolService, private router: Router) { }
 
   ngOnInit(): void {
+    this.schoolService.getUserById(localStorage.getItem('user')!).subscribe(answer => {
+      this.user = answer;
+      this.loadCourseClasses(answer.courseTitle!);
+    })
 
+  }
+
+  loadCourseClasses(courseName: String):void
+  {
+    this.schoolService.getAllClassesInACourseByItsName(courseName).subscribe(answer => {
+      this.courseClass = answer;
+    })
   }
 
 }

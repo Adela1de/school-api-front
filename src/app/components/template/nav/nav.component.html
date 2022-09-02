@@ -11,13 +11,13 @@
             <mat-icon color="accent">assignment_ind</mat-icon>Register
         </a>
         <a *ngIf="isUserRegisteredInACourse === false && showLoggedContent === true" routerLink="/courses" mat-list-item>
-            <mat-icon color="accent">book</mat-icon>Courses
+            <mat-icon color="accent">book</mat-icon>Cursos
         </a>
         <a *ngIf="showLoggedContent == true" routerLink="/logoff" mat-list-item>
             <mat-icon color="accent">highlight_off</mat-icon>Log off
         </a>
         <a *ngIf="isUserRegisteredInACourse == true" routerLink="/myClasses" mat-list-item>
-            <mat-icon color="accent">highlight_off</mat-icon>My Classes
+            <mat-icon color="accent">highlight_off</mat-icon>Matérias do curso
         </a>
       </mat-nav-list>
     </mat-drawer>

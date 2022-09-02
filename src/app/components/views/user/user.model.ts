@@ -1,3 +1,7 @@
+import { courseClass } from "../school/courseClass.model";
+import { grade } from "../school/grade.model";
+
+
 export interface user
 {
     studentId?: String;
@@ -7,6 +11,6 @@ export interface user
     password: String;
     guardian?: any[];
     courseTitle?: String;
-    classes?: any[];
-    grades?: any[];
+    courseClasses?: courseClass[];
+    grades?: grade[];
 }

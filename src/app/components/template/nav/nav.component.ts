@@ -35,7 +35,6 @@ export class NavComponent implements OnInit {
         answer => {
           this.user = answer;
           if(this.user.courseTitle != null) this.isUserRegisteredInACourse = true;
-          console.log(this.user)
       })
     }
   }

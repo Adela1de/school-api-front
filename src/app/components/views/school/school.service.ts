@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { user } from '../user/user.model';
 import { course } from './course.model';
+import { courseClass } from './courseClass.model';
 
 @Injectable({
   providedIn: 'root'
@@ -39,4 +40,11 @@ export class SchoolService {
     const url = `${this.baseUrl}course/student/set/${this.studentId}/${courseId}`
     return this.http.post<user>(url, null);
   }
+
+  getAllClassesInACourseByItsName(courseName: String):Observable<courseClass[]>
+  {
+    const url = `${this.baseUrl}course?courseName=${courseName}`
+    return this.http.get<courseClass[]>(url);
+  }
+  
 }

@@ -1,13 +1,36 @@
-<mat-card class="login mat-elevetion-z4" mat-card color="accent">
-    <mat-card-title class="loginTitle">
-        Tem certeza de deseja se matrícular no curso {{ user.courseTitle }} ?
+<mat-card class="courseClass mat-elevetion-z4" mat-card color="accent">
+    <mat-card-title class="courseClassTitle">
+        Todas as matérias disponíveis para alunos do curso {{ user.courseTitle }}
     </mat-card-title>
 </mat-card>
 
-<div class="buttons">
-    <div class="ok">
-        <button mat-raised-button color="accent">CONFIRM</button>
-    </div>
-    <button mat-raised-button color="accent">CANCEL</button>
-</div>
+<div class="content">
 
+    <div class="mat-elevation-z8 content-table">
+        <table class="coursesTable" mat-table [dataSource]="courseClass">
+
+            <ng-container matColumnDef="title">
+              <th mat-header-cell *matHeaderCellDef> TITLE </th>
+              <td mat-cell *matCellDef="let row"> {{ row.title }} </td>
+            </ng-container>
+        
+            <ng-container matColumnDef="credit">
+            <th mat-header-cell *matHeaderCellDef> CREDIT </th>
+            <td mat-cell *matCellDef="let row"> {{ row.credit }} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="actions">
+                <th class="mat-header" mat-header-cell *matHeaderCellDef> VIEW </th>
+                <td mat-cell *matCellDef="let row">
+                
+                <a class="favorite" routerLink="confirm/{{ row.courseClassId }}">
+                    <i class="material-icons">verified_user</i>
+                </a>
+            </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            
+        </table>
+    </div>
+</div>
