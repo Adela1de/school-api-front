@@ -1,0 +1,27 @@
+.login
+{
+    width: 75%;
+    margin: 2rem auto;
+    margin-bottom: 40rem;
+}
+
+.loginTitle
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.buttons
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ok{
+    margin-right: 3rem;
+}

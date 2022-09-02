@@ -35,16 +35,28 @@ export class SchoolService {
     return this.http.get<course>(url);
   }
 
+  getAllClassesInACourseByItsName(courseName: String):Observable<courseClass[]>
+  {
+    const url = `${this.baseUrl}course?courseName=${courseName}`
+    return this.http.get<courseClass[]>(url);
+  }
+
+  getCourseClassById(courseClassId: String):Observable<courseClass>
+  {
+    const url = `${this.baseUrl}courseClass/${courseClassId}`
+    return this.http.get<courseClass>(url);
+  }
+
   setCourseToStudent(courseId: String):Observable<user>
   {
     const url = `${this.baseUrl}course/student/set/${this.studentId}/${courseId}`
     return this.http.post<user>(url, null);
   }
 
-  getAllClassesInACourseByItsName(courseName: String):Observable<courseClass[]>
+  setStudentToCourseClass(courseClassId: String):Observable<courseClass>
   {
-    const url = `${this.baseUrl}course?courseName=${courseName}`
-    return this.http.get<courseClass[]>(url);
+    const url = `${this.baseUrl}course/courseClass/student/set/${this.studentId}/${courseClassId}`
+    return this.http.post<courseClass>(url, null)
   }
   
 }

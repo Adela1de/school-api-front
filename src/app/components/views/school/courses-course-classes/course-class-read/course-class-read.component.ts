@@ -14,18 +14,14 @@ export class CourseClassReadComponent implements OnInit {
   displayedColumns: String[] = ['title','credit', 'actions']
 
   courseClass: courseClass[] = []
-  user: user=
-  {
-    password: '',
-    email: '',
-    courseTitle: ''
-  }
+  courseTitle: string = '';
+
 
   constructor(private schoolService: SchoolService, private router: Router) { }
 
   ngOnInit(): void {
     this.schoolService.getUserById(localStorage.getItem('user')!).subscribe(answer => {
-      this.user = answer;
+      this.courseTitle = JSON.stringify(answer.courseTitle)!;
       this.loadCourseClasses(answer.courseTitle!);
     })
 
