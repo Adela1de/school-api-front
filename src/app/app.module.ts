@@ -15,7 +15,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
 import { HomeComponent } from './components/views/home/home.component';
-import { LoginComponent } from './components/views/user/login/login.component';
+import { LoginComponent } from './components/views/user/user-login/login/login.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { UserRegisterComponent } from './components/views/user/user-register/user-register.component';
@@ -28,6 +28,7 @@ import { CoursesWarningComponent } from './components/views/school/courses-warni
 import { CourseClassRegistrationComponent } from './components/views/school/courses-course-classes/course-class-registration/course-class-registration.component';
 import { CourseClassReadComponent } from './components/views/school/courses-course-classes/course-class-read/course-class-read.component';
 import { MyCourseClassesComponent } from './components/views/school/courses-course-classes/my-course-classes/my-course-classes.component';
+import { UserLoginComponent } from './components/views/user/user-login/user-ask/user-login.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { MyCourseClassesComponent } from './components/views/school/courses-cour
     CoursesWarningComponent,
     CourseClassRegistrationComponent,
     CourseClassReadComponent,
-    MyCourseClassesComponent
+    MyCourseClassesComponent,
+    UserLoginComponent
   ],
   imports: [
     BrowserModule,

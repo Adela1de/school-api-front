@@ -25,10 +25,10 @@ export class UserRegisterComponent implements OnInit {
 
   confirmRegistration():void
   {
-    this.userService.addUser(this.user).subscribe(answer => {
+    this.userService.addStudent(this.user).subscribe(answer => {
       console.log(answer)
       localStorage.clear();
-      localStorage.setItem('user', JSON.stringify(answer.studentId))
+      localStorage.setItem('user', JSON.stringify(answer.userId))
     })
     window.location.reload();
     this.router.navigate(['']);

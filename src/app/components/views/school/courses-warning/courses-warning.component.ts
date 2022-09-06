@@ -21,7 +21,7 @@ export class CoursesWarningComponent implements OnInit {
 
   user: user =
   {
-    studentId: '',
+    userId: '',
     email: '',
     password: ''
   }

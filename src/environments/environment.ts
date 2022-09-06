@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'http://localhost:8080/school/'
+  baseUrlSchool: 'http://localhost:8080/school/',
+  baseUrlUser: 'http://localhost:8080/users/'
 };
 
 /*

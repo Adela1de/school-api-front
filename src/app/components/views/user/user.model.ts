@@ -4,7 +4,7 @@ import { grade } from "../school/grade.model";
 
 export interface user
 {
-    studentId?: String;
+    userId?: String;
     firstName?: String;
     lastName?: String;
     email: String;

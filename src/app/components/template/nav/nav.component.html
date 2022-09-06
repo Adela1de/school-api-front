@@ -4,7 +4,7 @@
         <a *ngIf="showLoggedContent == true" routerLink="" mat-list-item>
             <mat-icon color="accent">home</mat-icon>Home
         </a>
-        <a *ngIf="showLoggedContent == false" routerLink="/login" mat-list-item>
+        <a *ngIf="showLoggedContent == false" routerLink="/login/ask" mat-list-item>
             <mat-icon color="accent">lock_open</mat-icon>Log in
         </a>
         <a *ngIf="showLoggedContent == false" routerLink="/register" mat-list-item>
@@ -19,7 +19,7 @@
         <a *ngIf="isUserRegisteredInACourse == true" routerLink="/courseClasses" mat-list-item>
             <mat-icon color="accent">highlight_off</mat-icon>Matérias do curso
         </a>
-        <a *ngIf="isUserRegisteredInACourse == true" routerLink="/myCourseClasses" mat-list-item>
+        <a *ngIf="isUserRegisteredInACourseClass == true" routerLink="/myCourseClasses" mat-list-item>
             <mat-icon color="accent">highlight_off</mat-icon>Minhas Matérias
         </a>
       </mat-nav-list>

@@ -9,20 +9,26 @@ import { user } from './user.model';
 })
 export class UserService {
 
-  baseUrl: String = environment.baseUrl;
+  baseUrl: String = environment.baseUrlUser;
 
   constructor(private http: HttpClient) { }
 
   getUser(email: String, password: String):Observable<user>
   {
-    const url = `${this.baseUrl}student/login`
+    const url = `${this.baseUrl}login/student`
     return this.http.post<user>(url,{email, password})
   }
 
-  addUser(user: user):Observable<user>
+  addStudent(student: user):Observable<user>
   {
-    const url = `${this.baseUrl}student/new`
-    return this.http.post<user>(url, user)
+    const url = `${this.baseUrl}register/student`
+    return this.http.post<user>(url, student)
   }
 
+  
+  addTeacher(teacher: user):Observable<user>
+  {
+    const url = `${this.baseUrl}register/student`
+    return this.http.post<user>(url, teacher)
+  }
 }

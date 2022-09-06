@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { user } from '../user.model';
-import { UserService } from '../user.service';
+import { user } from '../../user.model';
+import { UserService } from '../../user.service';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
 
   user: user = 
   {
-    studentId:'',
+    userId:'',
     firstName: '',
     lastName: '',
     email: '',
@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
   {
     this.userService.getUser(this.user.email, this.user.password).subscribe(
       answer => {
-        localStorage.setItem('user', JSON.stringify(answer.studentId));
+        localStorage.setItem('user', JSON.stringify(answer.userId));
       }
     )
 

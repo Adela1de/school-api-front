@@ -14,15 +14,17 @@ export class NavComponent implements OnInit {
   buttonState = true;
   showLoggedContent = false;
   isUserRegisteredInACourse = false;
+  isUserRegisteredInACourseClass = false;
   buttonIcon = "arrow_forward";
   user: user = 
   {
-    studentId:'',
+    userId:'',
     firstName: '',
     lastName: '',
     email: '',
     password: '',
-    courseTitle: ''
+    courseTitle: '',
+    courseClasses: []
   }
 
   constructor(private schoolService: SchoolService) { }
@@ -35,8 +37,10 @@ export class NavComponent implements OnInit {
         answer => {
           this.user = answer;
           if(this.user.courseTitle != null) this.isUserRegisteredInACourse = true;
+          if(this.user.courseClasses?.length! > 0) this.isUserRegisteredInACourseClass = true;
       })
     }
+    
   }
 
   changeButtonIcon():void

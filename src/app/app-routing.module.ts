@@ -6,7 +6,8 @@ import { CourseClassRegistrationComponent } from './components/views/school/cour
 import { MyCourseClassesComponent } from './components/views/school/courses-course-classes/my-course-classes/my-course-classes.component';
 import { CoursesReadComponent } from './components/views/school/courses-read/courses-read.component';
 import { CoursesWarningComponent } from './components/views/school/courses-warning/courses-warning.component';
-import { LoginComponent } from './components/views/user/login/login.component';
+import { LoginComponent } from './components/views/user/user-login/login/login.component';
+import { UserLoginComponent } from './components/views/user/user-login/user-ask/user-login.component';
 import { UserLogoffComponent } from './components/views/user/user-logoff/user-logoff.component';
 import { UserRegisterComponent } from './components/views/user/user-register/user-register.component';
 
@@ -16,12 +17,16 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'login',
+    path: 'login/ask',
+    component: UserLoginComponent
+  },
+  {
+    path: 'login/student',
     component: LoginComponent
   },
   {
-    path: 'register',
-    component: UserRegisterComponent
+    path: 'register/ask',
+    component: UserLoginComponent
   },
   {
     path: 'logoff',

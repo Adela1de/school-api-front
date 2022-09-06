@@ -11,7 +11,7 @@ import { courseClass } from './courseClass.model';
 })
 export class SchoolService {
 
-  baseUrl: String = environment.baseUrl;
+  baseUrl: String = environment.baseUrlSchool;
 
   studentId = localStorage.getItem('user')
 
