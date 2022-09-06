@@ -20,7 +20,7 @@ export class UserLoginComponent implements OnInit {
 
   souProfessor():void
   {
-    this.router.navigate(['']);
+    this.router.navigate(['login/teacher']);
   }
 
 }

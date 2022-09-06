@@ -21,6 +21,7 @@ export class UserLogoffComponent implements OnInit {
   confirmLogOff():void
   {
     localStorage.removeItem('user');
+    localStorage.removeItem('role');
     window.location.reload();
     this.router.navigate(['']);
   }

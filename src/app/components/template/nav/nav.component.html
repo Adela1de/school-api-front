@@ -10,7 +10,7 @@
         <a *ngIf="showLoggedContent == false" routerLink="/register" mat-list-item>
             <mat-icon color="accent">assignment_ind</mat-icon>Register
         </a>
-        <a *ngIf="isUserRegisteredInACourse === false && showLoggedContent === true" routerLink="/courses" mat-list-item>
+        <a *ngIf="isUserRegisteredInACourse === false && showLoggedContent === true" routerLink="{{ url }}" mat-list-item>
             <mat-icon color="accent">book</mat-icon>Cursos
         </a>
         <a *ngIf="showLoggedContent == true" routerLink="/logoff" mat-list-item>

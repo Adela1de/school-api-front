@@ -2,9 +2,11 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { teacher } from '../user/teacher.model';
 import { user } from '../user/user.model';
 import { course } from './course.model';
 import { courseClass } from './courseClass.model';
+
 
 @Injectable({
   providedIn: 'root'
@@ -17,10 +19,16 @@ export class SchoolService {
 
   constructor(private http: HttpClient) { }
 
-  getUserById(userId: String):Observable<user>
+  getStudentById(userId: String):Observable<user>
   {
     const url = `${this.baseUrl}student/${userId}`
     return this.http.get<user>(url);
+  }
+
+  getTeacherById(userId: String):Observable<teacher>
+  {
+    const url = `${this.baseUrl}teacher/${userId}`
+    return this.http.get<teacher>(url);
   }
 
   getAllCourses():Observable<course[]>

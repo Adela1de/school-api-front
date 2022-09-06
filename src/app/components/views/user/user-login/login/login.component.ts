@@ -16,7 +16,8 @@ export class LoginComponent implements OnInit {
     firstName: '',
     lastName: '',
     email: '',
-    password: ''
+    password: '',
+    role:''
   }
 
   constructor(private userService: UserService, private router: Router) { }
@@ -31,9 +32,10 @@ export class LoginComponent implements OnInit {
 
   userLogIn():void
   {
-    this.userService.getUser(this.user.email, this.user.password).subscribe(
+    this.userService.loginStudent(this.user.email, this.user.password).subscribe(
       answer => {
         localStorage.setItem('user', JSON.stringify(answer.userId));
+        localStorage.setItem('role', JSON.stringify(answer.role));
       }
     )
 

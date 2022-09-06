@@ -15,7 +15,8 @@ export class UserRegisterComponent implements OnInit {
     firstName: '',
     lastName: '',
     email: '',
-    password: ''
+    password: '',
+    role:''
   }
 
   constructor(private userService: UserService, private router: Router) { }

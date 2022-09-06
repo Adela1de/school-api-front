@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SchoolService } from '../../views/school/school.service';
+import { teacher } from '../../views/user/teacher.model';
 import { user } from '../../views/user/user.model';
 
 @Component({
@@ -15,7 +16,9 @@ export class NavComponent implements OnInit {
   showLoggedContent = false;
   isUserRegisteredInACourse = false;
   isUserRegisteredInACourseClass = false;
+  url = '';
   buttonIcon = "arrow_forward";
+
   user: user = 
   {
     userId:'',
@@ -24,7 +27,18 @@ export class NavComponent implements OnInit {
     email: '',
     password: '',
     courseTitle: '',
-    courseClasses: []
+    courseClasses: [],
+    role:''
+  }
+
+  teacher: teacher = 
+  {
+    userId: '',
+    firstName: '',
+    lastName: '',
+    email:'',
+    password:'',
+    role:''
   }
 
   constructor(private schoolService: SchoolService) { }
@@ -33,14 +47,33 @@ export class NavComponent implements OnInit {
     if(localStorage.getItem('user') != null) 
     {
       this.showLoggedContent = true;
-      this.schoolService.getUserById(localStorage.getItem('user')!).subscribe(
-        answer => {
-          this.user = answer;
-          if(this.user.courseTitle != null) this.isUserRegisteredInACourse = true;
-          if(this.user.courseClasses?.length! > 0) this.isUserRegisteredInACourseClass = true;
-      })
+      if(this.isStudent())
+      {
+        this.schoolService.getStudentById(localStorage.getItem('user')!).subscribe(
+          answer => {
+            this.user = answer;
+            if(this.user.courseTitle != null) this.isUserRegisteredInACourse = true;
+            if(this.user.courseClasses?.length! > 0) this.isUserRegisteredInACourseClass = true;
+            this.url = "/courses"
+        })
+      }
+      else
+      {
+        this.schoolService.getTeacherById(localStorage.getItem('user')!).subscribe(
+          answer =>{
+            this.teacher = answer;
+          }
+        )
+        this.url = "/coursesTeacher"
+      }
     }
     
+  }
+
+  isStudent():boolean
+  {
+    let role = localStorage.getItem('role');
+    return JSON.parse(role!) === "STUDENT"
   }
 
   changeButtonIcon():void

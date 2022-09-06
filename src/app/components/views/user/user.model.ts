@@ -13,4 +13,5 @@ export interface user
     courseTitle?: String;
     courseClasses?: courseClass[];
     grades?: grade[];
+    role?: String;
 }

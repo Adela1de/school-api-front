@@ -29,6 +29,8 @@ import { CourseClassRegistrationComponent } from './components/views/school/cour
 import { CourseClassReadComponent } from './components/views/school/courses-course-classes/course-class-read/course-class-read.component';
 import { MyCourseClassesComponent } from './components/views/school/courses-course-classes/my-course-classes/my-course-classes.component';
 import { UserLoginComponent } from './components/views/user/user-login/user-ask/user-login.component';
+import { TeacherLoginComponent } from './components/views/user/user-login/teacher-login/teacher-login.component';
+import { CoursesReadTeacherComponent } from './components/views/school/courses-read-teacher/courses-read-teacher.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { UserLoginComponent } from './components/views/user/user-login/user-ask/
     CourseClassRegistrationComponent,
     CourseClassReadComponent,
     MyCourseClassesComponent,
-    UserLoginComponent
+    UserLoginComponent,
+    TeacherLoginComponent,
+    CoursesReadTeacherComponent
   ],
   imports: [
     BrowserModule,

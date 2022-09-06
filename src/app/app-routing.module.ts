@@ -4,9 +4,11 @@ import { HomeComponent } from './components/views/home/home.component';
 import { CourseClassReadComponent } from './components/views/school/courses-course-classes/course-class-read/course-class-read.component';
 import { CourseClassRegistrationComponent } from './components/views/school/courses-course-classes/course-class-registration/course-class-registration.component';
 import { MyCourseClassesComponent } from './components/views/school/courses-course-classes/my-course-classes/my-course-classes.component';
+import { CoursesReadTeacherComponent } from './components/views/school/courses-read-teacher/courses-read-teacher.component';
 import { CoursesReadComponent } from './components/views/school/courses-read/courses-read.component';
 import { CoursesWarningComponent } from './components/views/school/courses-warning/courses-warning.component';
 import { LoginComponent } from './components/views/user/user-login/login/login.component';
+import { TeacherLoginComponent } from './components/views/user/user-login/teacher-login/teacher-login.component';
 import { UserLoginComponent } from './components/views/user/user-login/user-ask/user-login.component';
 import { UserLogoffComponent } from './components/views/user/user-logoff/user-logoff.component';
 import { UserRegisterComponent } from './components/views/user/user-register/user-register.component';
@@ -25,8 +27,12 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'register/ask',
-    component: UserLoginComponent
+    path: 'login/teacher',
+    component: TeacherLoginComponent
+  },
+  {
+    path: 'register',
+    component: UserRegisterComponent
   },
   {
     path: 'logoff',
@@ -35,6 +41,10 @@ const routes: Routes = [
   {
     path: 'courses',
     component: CoursesReadComponent
+  },
+  {
+    path: 'coursesTeacher',
+    component: CoursesReadTeacherComponent
   },
   {
     path: 'courses/confirm/:id',

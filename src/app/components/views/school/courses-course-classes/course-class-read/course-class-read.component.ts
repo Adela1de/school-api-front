@@ -20,7 +20,7 @@ export class CourseClassReadComponent implements OnInit {
   constructor(private schoolService: SchoolService, private router: Router) { }
 
   ngOnInit(): void {
-    this.schoolService.getUserById(localStorage.getItem('user')!).subscribe(answer => {
+    this.schoolService.getStudentById(localStorage.getItem('user')!).subscribe(answer => {
       this.courseTitle = JSON.stringify(answer.courseTitle)!;
       this.loadCourseClasses(answer.courseTitle!);
     })
