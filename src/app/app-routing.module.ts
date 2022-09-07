@@ -4,14 +4,16 @@ import { HomeComponent } from './components/views/home/home.component';
 import { CourseClassReadComponent } from './components/views/school/courses-course-classes/course-class-read/course-class-read.component';
 import { CourseClassRegistrationComponent } from './components/views/school/courses-course-classes/course-class-registration/course-class-registration.component';
 import { MyCourseClassesComponent } from './components/views/school/courses-course-classes/my-course-classes/my-course-classes.component';
-import { CoursesReadTeacherComponent } from './components/views/school/courses-read-teacher/courses-read-teacher.component';
-import { CoursesReadComponent } from './components/views/school/courses-read/courses-read.component';
-import { CoursesWarningComponent } from './components/views/school/courses-warning/courses-warning.component';
+import { CoursesReadTeacherComponent } from './components/views/school/courses/courses-read-teacher/courses-read-teacher.component';
+import { CoursesReadComponent } from './components/views/school/courses/courses-read/courses-read.component';
+import { CoursesWarningComponent } from './components/views/school/courses/courses-warning/courses-warning.component';
 import { LoginComponent } from './components/views/user/user-login/login/login.component';
 import { TeacherLoginComponent } from './components/views/user/user-login/teacher-login/teacher-login.component';
 import { UserLoginComponent } from './components/views/user/user-login/user-ask/user-login.component';
 import { UserLogoffComponent } from './components/views/user/user-logoff/user-logoff.component';
-import { UserRegisterComponent } from './components/views/user/user-register/user-register.component';
+import { UserRegisterComponent } from './components/views/user/user-register/student-register/user-register.component';
+import { TeacherRegisterComponent } from './components/views/user/user-register/teacher-register/teacher-register.component';
+import { UserRegisterAskComponent } from './components/views/user/user-register/user-register-ask/user-register-ask.component';
 
 const routes: Routes = [
   {
@@ -19,7 +21,7 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'login/ask',
+    path: 'login',
     component: UserLoginComponent
   },
   {
@@ -32,7 +34,15 @@ const routes: Routes = [
   },
   {
     path: 'register',
+    component: UserRegisterAskComponent
+  },
+  {
+    path: 'register/student',
     component: UserRegisterComponent
+  },
+  {
+    path: 'register/teacher',
+    component: TeacherRegisterComponent
   },
   {
     path: 'logoff',

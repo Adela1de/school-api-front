@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { course } from '../../course.model';
 
 @Component({
   selector: 'app-courses-read-teacher',
@@ -8,6 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class CoursesReadTeacherComponent implements OnInit {
 
   constructor() { }
+
+  displayedColumns: String[] = ['titulo', 'actions']
+
+  courses: course[] = []
 
   ngOnInit(): void {
   }

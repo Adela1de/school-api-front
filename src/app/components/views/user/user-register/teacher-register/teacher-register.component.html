@@ -1,0 +1,41 @@
+<mat-card class="register mat-elevetion-z4" mat-card color="accent">
+    <mat-card-title class="registerTitle">
+        Informe seus dados
+    </mat-card-title>
+</mat-card>
+
+<mat-card class="information mat-elevetion-z4" mat-card color="accent">
+    <div class="input">
+        <mat-form-field class="form">
+            <mat-label>First Name</mat-label>
+            <input matInput [(ngModel)]="teacher.firstName" type="text" name="First Name" placeholder="Ex. Lucas">  
+        </mat-form-field>
+    </div>
+    <div class="input">
+        <mat-form-field class="form">
+            <mat-label>Last Name</mat-label>
+            <input matInput [(ngModel)]="teacher.lastName" type="text" name="Last Name" placeholder="Ex. Silva">  
+        </mat-form-field>
+    </div>
+
+    <div class="input">
+        <mat-form-field class="form">
+            <mat-label>E-mail</mat-label>
+            <input matInput type="text" [(ngModel)]="teacher.email" name="E-mail" placeholder="Ex. teste@gmail.com">  
+        </mat-form-field>
+    </div>
+    
+    <div class="input">
+        <mat-form-field class="form">
+            <mat-label>Password</mat-label>
+            <input matInput [(ngModel)]="teacher.password" type="text" name="Password" placeholder="Ex. 123456789">  
+        </mat-form-field>
+    </div>
+</mat-card>
+
+<div class="buttons">
+    <div class="ok">
+        <button (click)="confirmRegistration()" mat-raised-button color="accent">CONFIRM</button>
+    </div>
+    <button mat-raised-button color="accent">CANCEL</button>
+</div>

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { user } from '../../user/user.model';
-import { course } from '../course.model';
-import { SchoolService } from '../school.service';
+import { user } from '../../../user/user.model';
+import { course } from '../../course.model';
+import { SchoolService } from '../../school.service';
 
 @Component({
   selector: 'app-courses-warning',

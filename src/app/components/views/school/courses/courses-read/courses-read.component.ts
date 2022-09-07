@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { course } from '../course.model';
-import { SchoolService } from '../school.service';
+import { course } from '../../course.model';
+import { SchoolService } from '../../school.service';
 
 @Component({
   selector: 'app-courses-read',

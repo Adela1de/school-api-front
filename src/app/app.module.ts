@@ -18,19 +18,22 @@ import { HomeComponent } from './components/views/home/home.component';
 import { LoginComponent } from './components/views/user/user-login/login/login.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { UserRegisterComponent } from './components/views/user/user-register/user-register.component';
+
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { FormsModule } from '@angular/forms';
 import { UserLogoffComponent } from './components/views/user/user-logoff/user-logoff.component';
-import { CoursesReadComponent } from './components/views/school/courses-read/courses-read.component';
+import { CoursesReadComponent } from './components/views/school/courses/courses-read/courses-read.component';
 import {MatTableModule} from '@angular/material/table';
-import { CoursesWarningComponent } from './components/views/school/courses-warning/courses-warning.component';
+import { CoursesWarningComponent } from './components/views/school/courses/courses-warning/courses-warning.component';
 import { CourseClassRegistrationComponent } from './components/views/school/courses-course-classes/course-class-registration/course-class-registration.component';
 import { CourseClassReadComponent } from './components/views/school/courses-course-classes/course-class-read/course-class-read.component';
 import { MyCourseClassesComponent } from './components/views/school/courses-course-classes/my-course-classes/my-course-classes.component';
 import { UserLoginComponent } from './components/views/user/user-login/user-ask/user-login.component';
 import { TeacherLoginComponent } from './components/views/user/user-login/teacher-login/teacher-login.component';
-import { CoursesReadTeacherComponent } from './components/views/school/courses-read-teacher/courses-read-teacher.component';
+import { CoursesReadTeacherComponent } from './components/views/school/courses/courses-read-teacher/courses-read-teacher.component';
+import { TeacherRegisterComponent } from './components/views/user/user-register/teacher-register/teacher-register.component';
+import { UserRegisterComponent } from './components/views/user/user-register/student-register/user-register.component';
+import { UserRegisterAskComponent } from './components/views/user/user-register/user-register-ask/user-register-ask.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,6 @@ import { CoursesReadTeacherComponent } from './components/views/school/courses-r
     NavComponent,
     HomeComponent,
     LoginComponent,
-    UserRegisterComponent,
     UserLogoffComponent,
     CoursesReadComponent,
     CoursesWarningComponent,
@@ -49,7 +51,10 @@ import { CoursesReadTeacherComponent } from './components/views/school/courses-r
     MyCourseClassesComponent,
     UserLoginComponent,
     TeacherLoginComponent,
-    CoursesReadTeacherComponent
+    CoursesReadTeacherComponent,
+    TeacherRegisterComponent,
+    UserRegisterComponent,
+    UserRegisterAskComponent
   ],
   imports: [
     BrowserModule,

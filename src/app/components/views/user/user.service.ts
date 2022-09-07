@@ -32,9 +32,9 @@ export class UserService {
     return this.http.post<user>(url, student)
   }
 
-  addTeacher(teacher: user):Observable<user>
+  addTeacher(teacher: teacher):Observable<teacher>
   {
-    const url = `${this.baseUrl}register/student`
-    return this.http.post<user>(url, teacher)
+    const url = `${this.baseUrl}register/teacher`
+    return this.http.post<teacher>(url, teacher)
   }
 }

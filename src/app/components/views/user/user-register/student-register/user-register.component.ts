@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { user } from '../user.model';
-import { UserService } from '../user.service';
+import { user } from '../../user.model';
+import { UserService } from '../../user.service';
+
 
 @Component({
   selector: 'app-user-register',
@@ -30,6 +31,7 @@ export class UserRegisterComponent implements OnInit {
       console.log(answer)
       localStorage.clear();
       localStorage.setItem('user', JSON.stringify(answer.userId))
+      localStorage.setItem('role', JSON.stringify(answer.role))
     })
     window.location.reload();
     this.router.navigate(['']);

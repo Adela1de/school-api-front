@@ -38,9 +38,6 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('role', JSON.stringify(answer.role));
       }
     )
-
-    window.location.reload();
-    this.router.navigate(['']);
   }
 
 }

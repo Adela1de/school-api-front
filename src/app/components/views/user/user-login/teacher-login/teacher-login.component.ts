@@ -35,10 +35,9 @@ export class TeacherLoginComponent implements OnInit {
     this.userService.loginTeacher(this.teacher.email, this.teacher.password).subscribe(answer => {
       localStorage.setItem('user', JSON.stringify(answer.userId));
       localStorage.setItem('role', JSON.stringify(answer.role));
+
     })
 
-    window.location.reload();
-    this.router.navigate(['']);
   }
 
 }

@@ -1,0 +1,27 @@
+.coursesTeacher
+{
+    width: 40%;
+    margin: 2rem auto;
+    margin-bottom: 10rem;
+}
+
+.coursesTeacherTitle
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.content
+{
+    width: 90%;
+    margin: 1.4rem auto auto auto;
+}
+
+.coursesTable
+{
+    width: 100%;
+}
