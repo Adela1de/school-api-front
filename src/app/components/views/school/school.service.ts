@@ -61,6 +61,12 @@ export class SchoolService {
     return this.http.get<courseClass[]>(url)
   }
 
+  getAllCourseClassesOfACourse(courseName: String):Observable<courseClass[]>
+  {
+    const url = `${this.baseUrl}/course?courseName=${courseName}`
+    return this.http.get<courseClass[]>(url)
+  }
+
   setCourseToStudent(courseId: String):Observable<user>
   {
     const url = `${this.baseUrl}course/student/set/${this.studentId}/${courseId}`

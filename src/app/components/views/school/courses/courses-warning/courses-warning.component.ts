@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { user } from '../../../user/user.model';
 import { course } from '../../course.model';
+import { courseClass } from '../../courseClass.model';
 import { SchoolService } from '../../school.service';
 
 @Component({
@@ -12,19 +13,15 @@ import { SchoolService } from '../../school.service';
 
 export class CoursesWarningComponent implements OnInit {
 
+  displayedColumns: String[] = ['title', 'teacherName', 'credit']
+
   course: course =
   {
     id: '',
-    title:'',
-    teacherName: ''
+    title: ''
   }
 
-  user: user =
-  {
-    userId: '',
-    email: '',
-    password: ''
-  }
+  courseClasses: courseClass[] = []
 
   constructor(private router: Router, private schoolService: SchoolService, private route: ActivatedRoute) { }
 
@@ -33,6 +30,9 @@ export class CoursesWarningComponent implements OnInit {
     this.schoolService.getCourseById(this.course.id).subscribe(
       answer => {
         this.course = answer
+        this.schoolService.getAllClassesInACourseByItsName(answer.title).subscribe(answer =>{
+          this.courseClasses = answer;
+        })
       })
   }
 

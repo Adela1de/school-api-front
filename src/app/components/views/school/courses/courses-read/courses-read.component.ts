@@ -10,7 +10,7 @@ import { SchoolService } from '../../school.service';
 export class CoursesReadComponent implements OnInit {
 
   
-  displayedColumns: String[] = ['titulo', 'teacherName', 'actions']
+  displayedColumns: String[] = ['titulo', 'actions']
   courses:course[] = []
 
   constructor(private schoolService: SchoolService) { }

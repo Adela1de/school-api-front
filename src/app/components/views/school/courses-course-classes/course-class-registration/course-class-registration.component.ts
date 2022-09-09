@@ -14,9 +14,7 @@ export class CourseClassRegistrationComponent implements OnInit {
 
   courseClass: courseClass =
   {
-    courseClassId: '',
     title: '',
-    credit: 0
   }
 
   ngOnInit(): void {
